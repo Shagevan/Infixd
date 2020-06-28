@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+tools:context="com.connect.infixd.mobile.Groups.AddGroupActivity">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/groupProfPicIV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddGroupToolbar"
+        app:srcCompat="@drawable/addimagered" />
+
+    <EditText
+        android:id="@+id/AddGroupNameET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/tbox"
+        android:ems="10"
+        android:hint="Group Name"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColorHint="@color/ash_color"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline25" />
+
+    <EditText
+        android:id="@+id/AddGroupDescET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tbox"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:padding="15dp"
+        android:textColorHint="@color/ash_color"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/AddGroupNameET"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/AddGroupNameET"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/AddGroupNameET"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+            <EditText
+                android:id="@+id/AddGroupExtUrlET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbox"
+                android:ems="10"
+                android:hint="External URL"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:textColorHint="@color/ash_color"
+                android:layout_marginLeft="0dp"
+                app:layout_constraintLeft_toLeftOf="@+id/AddGroupDescET"
+                android:layout_marginRight="0dp"
+                app:layout_constraintRight_toRightOf="@+id/AddGroupDescET"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/AddGroupDescET"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/AddGroupToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline25"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35"
+        tools:layout_editor_absoluteY="224dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/createGroupbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/tbox"
+        android:text="Create Group"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_dark"
+        android:textSize="10pt"
+        app:layout_constraintLeft_toLeftOf="@+id/AddGroupExtUrlET"
+        app:layout_constraintRight_toRightOf="@+id/AddGroupExtUrlET"
+        app:layout_constraintTop_toBottomOf="@+id/AddGroupExtUrlET" />
+
+</android.support.constraint.ConstraintLayout>
+
+</ScrollView>
+

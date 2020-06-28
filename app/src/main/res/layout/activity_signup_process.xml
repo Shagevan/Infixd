@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_signup_process"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context="com.connect.infixd.mobile.SignupProcess.SignupProcessActivity">
+
+    <com.badoualy.stepperindicator.StepperIndicator
+        android:id="@+id/stepper_indicator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/primary_color"
+        app:stpi_showStepNumberInstead="true"
+        app:stpi_stepCount="3"
+        app:stpi_indicatorColor="@color/white_color"
+        app:stpi_indicatorRadius="6dp"
+        app:stpi_circleColor="@color/white_color"
+        app:stpi_lineColor="@color/white_color"
+        app:stpi_lineDoneColor="@color/white_color"
+        app:stpi_lineStrokeWidth="1dp"
+        app:stpi_lineMargin="15dp"
+        app:stpi_circleStrokeWidth="1sp"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="80dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="384dp"
+        android:layout_height="0dp"
+        android:id="@+id/guideline"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.028218694" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline3"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="59dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.10405644" />
+
+    <com.connect.infixd.mobile.CustomViews.CustomViewPager
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/signupViewPager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+</android.support.constraint.ConstraintLayout>

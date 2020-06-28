@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) Infixd Pvt.Ltd. - All Rights Reserved
+    Unauthorized copying of this file, via any medium is strictly prohibited
+    Proprietary and confidential
+    -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/contactsrowID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color">
+
+    <com.connect.infixd.mobile.CustomViews.CircleImageView
+        android:id="@+id/contactimageView"
+        android:layout_width="78dp"
+        android:layout_height="71dp"
+        android:layout_gravity="top"
+        android:padding="10dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/primary_color"
+        android:src="@drawable/userprofile" />
+
+    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/layout_border"
+                android:padding="10dp"
+                android:layout_marginRight="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="User Name"
+                    android:textSize="20dp"
+                    android:textColor="@color/black_color"
+                    android:gravity="center_vertical"
+                    android:id="@+id/contactUserName"/>
+            </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home_icon"
+            app:actionViewClass="android.widget.TextView"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/nav_contacts_icon"
+            app:actionViewClass="android.widget.TextView"
+            android:title="People" />
+
+        <item
+            android:id="@+id/nav_currents"
+            android:icon="@drawable/nav_currents_icon"
+            app:actionViewClass="android.widget.TextView"
+            android:title="Currents" />
+
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search_red_24dp"
+            app:actionViewClass="android.widget.TextView"
+            android:title="Search" />
+    </group>
+
+    <item android:title="Notifications">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_intro_req"
+                android:icon="@drawable/nav_introduction_request_icon"
+                app:actionViewClass="android.widget.TextView"
+                android:title="Introduction Requests" />
+            <item
+                android:id="@+id/nav_intro"
+                android:icon="@drawable/nav_introduction_icon"
+                app:actionViewClass="android.widget.TextView"
+                android:title="Introductions" />
+            <item
+                android:id="@+id/nav_direct_req"
+                android:icon="@drawable/nav_direct_request_icon"
+                app:actionViewClass="android.widget.TextView"
+                android:title="Direct Requests" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

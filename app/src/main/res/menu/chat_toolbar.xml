@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) Infixd Pvt.Ltd. - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/add_new_chat"
+        android:icon="@drawable/ic_add_white"
+        android:title="add chat"
+        app:showAsAction="always"
+        />
+</menu>

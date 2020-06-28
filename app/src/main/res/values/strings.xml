@@ -1,0 +1,103 @@
+<!--
+Copyright (C) Infixd Pvt.Ltd. - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+-->
+<resources>
+    <string name="app_name">Infixd</string>
+    <!-- Dialog box related strings-->
+    <string name="internet_connection">Internet Connection is not available</string>
+    <string name="positive_feedback">OK</string>
+    <string name="save_feedback">Save</string>
+    <string name="cancel_feedback">Cancel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_app_id">687143171445903</string>
+    <string name="fb_login_protocol_scheme">fb687143171445903</string>
+    <string name="title_activity_facebook_login">FacebookLoginActivity</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="facebook_title_text">Facebook Login</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="facebook_status_fmt">Facebook User: %s</string>
+    <string name="loading">Loading…</string>
+
+    <string name="title_activity_twitter_login">TwitterLoginActivity</string>
+    <string name="twitter_consumer_key">O5K73tDiTDsLg84r2U8HJTZES</string>
+    <string name="twitter_consumer_secret">ci9wrcReD18KmZLYT05N7IrExpLU6yx4dkF9QFNm9jpKDBWwmM</string>
+    <string name="twitter_status_fmt">Twitter User: %s</string>
+    <string name="twitter_title_text">Twitter Login</string>
+
+    <string name="send_button_label">Send</string>
+
+    <string name="app_label">App Label</string>
+    <string name="search_hint">Search Here</string>
+    <string name="title_activity_user_profile_edit_dialog">UserProfileEditDialog</string>
+    <string name="title_activity_google_login">GoogleLoginActivity</string>
+    <string name="google_status_fmt">Google User: %s</string>
+    <string name="google_title_text">Google Sign In</string>
+    <string name="google_client_id">490157919367-3q1s613e970tatid72j5aiit5l8qf27j.apps.googleusercontent.com</string>
+
+    <string name="disconnect">Disconnect</string>
+    <string name="title_activity_user_home">UserHomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="near_search_msg">Please turn on your location to see who\'s near by</string>
+
+    <string name="empty_currents_page__msg"> <![CDATA[You have not created &#xa; any currents yet. &#xa; Go to home page to &#xa; make your first current.]]> </string>
+    <string name="send_introduction_request"> Get Infixd </string>
+
+    <!--dialog messages-->
+    <string name="dialog_report_message">Something went wrong</string>
+    <string name="dialog_report_action">REPORT</string>
+    <string name="dialog_connection_error_message">Connection Error</string>
+    <string name="dialog_connection_error_action">RETRY</string>
+    <string name="title_activity_instagram_login">InstagramLoginActivity</string>
+    <string name="dialog_instagram_login_failed">Instagram authentication failure.</string>
+
+    <!--empty card messages-->
+    <string name="emptyContact1">Oops!\nYou do not have\nany contacts yet.</string>
+    <string name="emptyContact2">Invite Friends now to\nstart passing currents and\nmaking connections</string>
+    <string name="emptyMyCurrent">You have not created \n any currents yet.\n Go to home page and \n make your first current.</string>
+    <string name="emptyHome1">Your home page \n seems a little empty.</string>
+    <string name="emptyHome2">Why not drag \n some friends over.</string>
+    <string name="IR1">You have not received \n any introductions yet. \n\n May be your friends are \n not yet on infixd. \n\n Invite them so that those who \n wants to get introduced to you, \n can get connected through \n your friends.</string>
+    <string name="IR2">May be your friends are \n not yet on infixd. \n \n Invite them so that those who \n wants to get introduced to you, \n can get connected through \n your friends.</string>
+    <string name="DR1">You have not received any \n requests to connect from \n nearby Infixers.</string>
+    <string name="DR2">To see who is Infixing</string>
+    <string name="DR3">nearby tap</string>
+    <string name="intro1">You have not received any \n requests to introduce \n one of your friends.</string>
+    <string name="intro2">When someone wants \n to get introduced \n to one of your friends \n we will notify it to you here.</string>
+    <string name="empty_chat1">You have not started \n any conversation yet</string>
+    <string name="empty_chat2">a new chat</string>
+    <string name="chat1">Tap a face </string>
+    <string name="reg_popup1">We will send our confirmation code to this number:</string>
+    <string name="reg_popup2">By pressing CONFIRM, You are agreeing to our <a href="http://www.infixd.com/privacy-policy">Privacy Policy</a>.</string>
+    <string name="delete_chat_popup_msg">This will erase this conversation in all devices. \n Are you sure you want to delete</string>
+    <string name="intro_path2">to see if someone \n you know can make \n an introduction </string>
+    <string name="intro_path1">None of your friends,</string>
+    <string name="social_head">Connect your \n Social Networks</string>
+    <string name="invite_friends_message">Send this link http://www.infixd.com/</string>
+
+    <string name="title_activity_image_viewer">ImageViewerActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!--Profile Default Values-->
+    <string name="my_profile_about_me">Tell something about you ...</string>
+    <string name="my_profile_education">Where did you studied?</string>
+    <string name="my_profile_profession">What do you do?</string>
+    <string name="my_profile_location">Where do you live?</string>
+    <string name="other_profile_about_me">not provided</string>
+    <string name="other_profile_education">not provided</string>
+    <string name="other_profile_profession">not provided</string>
+    <string name="other_profile_location">not provided</string>
+    <string name="im_on_infixd_msg">Would you like to post this on facebook?</string>
+
+</resources>
+

@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.connect.infixd.mobile.Chat.RecentChatFragment">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/recent_chat_first_recent_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.connect.infixd.mobile.CustomViews.CircleImageView
+            android:id="@+id/recent_chat_first_recent_IV"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="32dp"
+            android:src="@color/primary_color"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="1dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recent_chat_first_recent_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="Treo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/recent_chat_first_recent_IV"
+            app:layout_constraintRight_toRightOf="@+id/recent_chat_first_recent_IV"
+            app:layout_constraintTop_toBottomOf="@+id/recent_chat_first_recent_IV"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/recent_chat_first_unread_msg_tv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/rounded_textview"
+            android:gravity="center"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/recent_chat_first_recent_TV"
+            app:layout_constraintRight_toRightOf="@+id/recent_chat_first_recent_IV" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/recent_chat_second_recent_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <com.connect.infixd.mobile.CustomViews.CircleImageView
+            android:id="@+id/recent_chat_second_recent_IV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@color/primary_color"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="1dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recent_chat_second_recent_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/recent_chat_second_recent_IV"
+            app:layout_constraintRight_toRightOf="@+id/recent_chat_second_recent_IV"
+            app:layout_constraintTop_toBottomOf="@+id/recent_chat_second_recent_IV" />
+
+        <TextView
+            android:id="@+id/recent_chat_second_unread_msg_tv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/rounded_textview"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/recent_chat_second_recent_TV"
+            app:layout_constraintRight_toRightOf="@+id/recent_chat_second_recent_IV" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/recentChat_recyclerViewer"/>
+</LinearLayout>

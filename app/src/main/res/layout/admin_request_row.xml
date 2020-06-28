@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.connect.infixd.mobile.CustomViews.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@color/primary_dark"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/adninRequestUserPicIV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/adminRequestUserNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:text="TextView"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/adninRequestUserPicIV"
+        app:layout_constraintTop_toTopOf="@+id/adninRequestUserPicIV"
+        app:layout_constraintVertical_bias="0.545"
+        app:layout_constraintLeft_toRightOf="@+id/adninRequestUserPicIV"
+        android:layout_marginLeft="8dp" />
+
+    <com.connect.infixd.mobile.CustomViews.CircleImageView
+        android:id="@+id/adminReuestAcceptBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@color/green_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/adminRequestUserNameTV"
+        app:layout_constraintRight_toLeftOf="@+id/adminReuestRejectBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.connect.infixd.mobile.CustomViews.CircleImageView
+        android:id="@+id/adminReuestRejectBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@color/primary_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

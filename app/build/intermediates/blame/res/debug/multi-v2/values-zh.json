@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
+            "map": [
+                {
+                    "source": "/Users/shagevan/.gradle/caches/transforms-1/files-1.1/android-image-cropper-2.6.0.aar/ebccf69e790368aeec6bd7260225e54f/res/values-zh/values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,107,169,232",
+                        "endColumns": "51,61,62,64",
+                        "endOffsets": "102,164,227,292"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/shagevan/Desktop/mobile-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
+            "map": [
+                {
+                    "source": "/Users/shagevan/.gradle/caches/transforms-1/files-1.1/android-image-cropper-2.6.0.aar/ebccf69e790368aeec6bd7260225e54f/res/values-zh/values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,107,169,232",
+                        "endColumns": "51,61,62,64",
+                        "endOffsets": "102,164,227,292"
+                    }
+                }
+            ]
+        }
+    ]
+}

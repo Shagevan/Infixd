@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/shagevan/Desktop/Infixd/mobile-app/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/editprofile.png",
+        "source": "/Users/shagevan/Desktop/Infixd/mobile-app/app/src/main/res/mipmap-xxhdpi/editprofile.png"
+    }
+]

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.connect.infixd.mobile.CustomViews.CircleImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/userprofile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/memberProfilePicImageView"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/memberNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First name"
+        app:layout_constraintLeft_toRightOf="@+id/memberProfilePicImageView"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/memberProfilePicImageView"
+        app:layout_constraintTop_toTopOf="@+id/memberProfilePicImageView" />
+
+    <TextView
+        android:id="@+id/memberRankTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rank"
+        app:layout_constraintLeft_toRightOf="@+id/memberNameTV"
+        android:layout_marginLeft="51dp"
+        android:layout_marginStart="51dp"
+        app:layout_constraintBottom_toBottomOf="@+id/memberNameTV"
+        app:layout_constraintTop_toTopOf="@+id/memberNameTV" />
+
+    <TextView
+        android:id="@+id/memberConnectivityTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connectivity"
+        app:layout_constraintLeft_toRightOf="@+id/memberRankTV"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/memberRankTV"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toTopOf="@+id/memberRankTV" />
+
+</android.support.constraint.ConstraintLayout>

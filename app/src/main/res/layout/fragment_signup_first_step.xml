@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) Infixd Pvt.Ltd. - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+-->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context="com.connect.infixd.mobile.SignupProcess.SignupFirstStep"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:text="Verify"
+        android:textSize="20sp"
+        android:textColor="@color/white_color"
+        android:layout_height="48dp"
+        android:id="@+id/btn_verify"
+        android:background="@drawable/red_button_background"
+        android:textAllCaps="false"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="@+id/guideline23"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/et_verification_code"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/et_verification_code" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:inputType="number"
+        android:padding="15dp"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:background="@drawable/tbox"
+        android:ems="10"
+        android:id="@+id/et_verification_code"
+        android:hint="verification code"
+        android:gravity="center_vertical|center"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        android:layout_marginRight="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="8pt"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:id="@+id/firstlineTV"
+        android:text="Enter the code we have"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/secondlineTV" />
+
+    <TextView
+        android:id="@+id/reSendCodeTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:gravity="center"
+        android:text="Resend Code"
+        android:padding="15dp"
+        android:textColor="@color/primary_color"
+        android:textSize="8pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_verify"
+        app:layout_constraintRight_toRightOf="@+id/btn_verify" />
+
+    <TextView
+        android:id="@+id/secondlineTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="8pt"
+        android:text="sent to your device"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/firstlineTV"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/firstlineTV"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_verification_code" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline23"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        tools:layout_editor_absoluteY="284dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "490157919367",
+    "firebase_url": "https://strapd-162605.firebaseio.com",
+    "project_id": "strapd-162605",
+    "storage_bucket": "strapd-162605.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490157919367:android:7a23034d17c70e38",
+        "android_client_info": {
+          "package_name": "com.connect.infixd.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490157919367-3q1s613e970tatid72j5aiit5l8qf27j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoPNgnKZwYrj6FECdhlCitCuUC9ioWw6U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/intermediates/res/merged/debug/drawable-mdpi/search_menu_icon.png",
+        "source": "/Users/shagevan/Desktop/Infixd/mobile-app/app/src/main/res/drawable-mdpi/search_menu_icon.png"
+    },
+    {
+        "merged": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/intermediates/res/merged/debug/drawable-mdpi/change_profile.png",
+        "source": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/generated/res/pngs/debug/drawable-mdpi/change_profile.png"
+    },
+    {
+        "merged": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/intermediates/res/merged/debug/drawable-mdpi/chat_icon.png",
+        "source": "/Users/shagevan/Desktop/Infixd/mobile-app/app/src/main/res/drawable-mdpi/chat_icon.png"
+    },
+    {
+        "merged": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/intermediates/res/merged/debug/drawable-mdpi/bluetooth_icon.png",
+        "source": "/Users/shagevan/Desktop/Infixd/mobile-app/app/src/main/res/drawable-mdpi/bluetooth_icon.png"
+    },
+    {
+        "merged": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/intermediates/res/merged/debug/drawable-mdpi/groups_menu.png",
+        "source": "/Users/shagevan/Desktop/Infixd/mobile-app/app/src/main/res/drawable-mdpi/groups_menu.png"
+    },
+    {
+        "merged": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/intermediates/res/merged/debug/drawable-mdpi/contacts_icon.png",
+        "source": "/Users/shagevan/Desktop/Infixd/mobile-app/app/src/main/res/drawable-mdpi/contacts_icon.png"
+    },
+    {
+        "merged": "/Users/shagevan/Desktop/Infixd/mobile-app/app/build/intermediates/res/merged/debug/drawable-mdpi/close_toolbar.png",
+        "source": "/Users/shagevan/Desktop/Infixd/mobile-app/app/src/main/res/drawable-mdpi/close_toolbar.png"
+    }
+]

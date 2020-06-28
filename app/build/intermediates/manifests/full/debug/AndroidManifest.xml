@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) Infixd Pvt.Ltd. - All Rights Reserved
+ Unauthorized copying of this file, via any medium is strictly prohibited
+ Proprietary and confidential
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.connect.infixd.mobile"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.connect.infixd.mobile.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.connect.infixd.mobile.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="com.connect.infixd.mobile.Application.InfixdApp"
+        android:allowBackup="false"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.connect.infixd.mobile.SignupProcess.LauncherActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.connect.infixd.mobile.SignupProcess.SignupProcessActivity" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/com_facebook_activity_theme" />
+        <activity
+            android:name="com.connect.infixd.mobile.SignupProcess.FacebookLoginActivity"
+            android:label="@string/title_activity_facebook_login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.connect.infixd.mobile.SignupProcess.TwitterLoginActivity"
+            android:label="@string/title_activity_twitter_login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.connect.infixd.mobile.Services.InfixdFirebaseMessagingService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.connect.infixd.mobile.Services.InfixdFirebaseInstanceIDService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- RecentChat Notification Services -->
+        <service
+            android:name="com.connect.infixd.mobile.Services.RecentChatNotificationService"
+            android:enabled="true" />
+
+        <!-- Intent Services -->
+        <service
+            android:name="com.connect.infixd.mobile.intentservices.UserIntentService"
+            android:exported="false" />
+        <service
+            android:name="com.connect.infixd.mobile.intentservices.FriendIntentService"
+            android:exported="false" />
+        <service
+            android:name="com.connect.infixd.mobile.intentservices.NotificationIntentService"
+            android:exported="false" />
+        <service
+            android:name="com.connect.infixd.mobile.Services.InfixdUploadService"
+            android:exported="false" />
+        <service
+            android:name="com.connect.infixd.mobile.Services.InfixdDownloadService"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.connect.infixd.mobile.Services.RecentChatBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="RestartRecentChatServiceWhenStopped" >
+            <intent-filter>
+                <action android:name="RecentChatNotificationService.RestartService" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.connect.infixd.mobile.SignupProcess.RegisterPage"
+            android:windowSoftInputMode="adjustUnspecified" />
+        <activity android:name="com.connect.infixd.mobile.Search.InfixdSearchActivity" />
+        <activity android:name="com.connect.infixd.mobile.Groups.AddGroupActivity" />
+        <activity android:name="com.connect.infixd.mobile.User.UserProfileForFriends" />
+        <activity android:name="com.connect.infixd.mobile.User.UserProfileForNotFriends" />
+        <activity
+            android:name="com.connect.infixd.mobile.User.UserProfileEditDialog"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
+        <activity android:name="com.connect.infixd.mobile.User.UserProfile" />
+        <activity
+            android:name="com.connect.infixd.mobile.SignupProcess.GoogleLoginActivity"
+            android:label="@string/title_activity_google_login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name="com.connect.infixd.mobile.Post.NewPostActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.connect.infixd.mobile.Functions.CropImageActivity" />
+        <activity
+            android:name="com.connect.infixd.mobile.Chat.ChatActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.connect.infixd.mobile.UserHome.UserHomeActivity"
+            android:label="@string/title_activity_user_home"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.connect.infixd.mobile.NearSearch.NearSearchActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.connect.infixd.mobile.Post.ShareAlertDialog"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
+        <activity android:name="com.connect.infixd.mobile.Introduction.IntroductionPathActivity" />
+        <activity
+            android:name="com.connect.infixd.mobile.Search.SearchContactsActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.connect.infixd.mobile.Groups.GroupMembersInfoActivity" />
+        <activity android:name="com.connect.infixd.mobile.Groups.GroupAdminActivity" />
+        <activity android:name="com.connect.infixd.mobile.Groups.SubscribedMemberActivity" />
+        <activity android:name="com.connect.infixd.mobile.Groups.GroupMembersActivity" />
+        <activity android:name="com.connect.infixd.mobile.Search.SearchGroupMembersActivity" />
+        <activity android:name="com.connect.infixd.mobile.Search.SearchGroupActivity" />
+        <activity android:name="com.connect.infixd.mobile.Groups.GroupPublicProfileActivity" />
+        <activity android:name="com.connect.infixd.mobile.Groups.AdminRequestActivity" />
+        <activity android:name="com.connect.infixd.mobile.Currents.ReactedUsersActivity" />
+        <activity android:name="com.connect.infixd.mobile.Functions.CropProfilePictureActivity" />
+        <activity
+            android:name="com.connect.infixd.mobile.Functions.ImageViewerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_image_viewer"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.connect.infixd.mobile.UserHome.AddUserAlertDialog"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.0.0" />
+
+        <activity android:name="com.facebook.CustomTabMainActivity" />
+        <activity
+            android:name="com.twitter.sdk.android.tweetui.PlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/MediaTheme" />
+        <activity
+            android:name="com.twitter.sdk.android.tweetui.GalleryActivity"
+            android:theme="@style/MediaTheme" />
+        <!--
+ FirebaseMessagingService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.connect.infixd.mobile" />
+            </intent-filter>
+        </receiver>
+        <!--
+ Internal (not exported) receiver used by the app to start its own exported services
+             without risk of being spoofed.
+        -->
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
+            android:exported="false" />
+        <!--
+ FirebaseInstanceIdService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.connect.infixd.mobile.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+
+        <service
+            android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.twitter.sdk.android.core.identity.OAuthActivity"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
+            android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:icon="@drawable/tw__transparent"
+            android:label="@string/kit_name" />
+        <!--
+         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+         with the application context. This config is merged in with the host app's manifest,
+         but there can only be one provider with the same authority activated at any given
+         point; so if the end user has two or more different apps that use Facebook SDK, only the
+         first one will be able to use the provider. To work around this problem, we use the
+         following placeholder in the authority to identify each host application as if it was
+         a completely different provider.
+        -->
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:authorities="com.connect.infixd.mobile.FacebookInitProvider"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

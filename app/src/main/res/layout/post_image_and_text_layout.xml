@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/both_views"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+
+    <!-- only image layout-->
+    <ImageView
+        android:id="@+id/post_image_view2"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        swipe:layout_constraintHorizontal_bias="0.0"
+        swipe:layout_constraintLeft_toLeftOf="parent"
+        swipe:layout_constraintRight_toRightOf="parent"
+        swipe:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/showTimeIV2"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="16dp"
+        swipe:layout_constraintRight_toRightOf="parent"
+        swipe:srcCompat="@drawable/ic_access_time_white_24dp"
+        swipe:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/timeDateView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        swipe:layout_constraintTop_toTopOf="parent"
+        swipe:layout_constraintRight_toLeftOf="@+id/showTimeIV2"
+        android:layout_marginRight="8dp">
+
+        <TextView
+            android:id="@+id/showDateTimeHeaderTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passed"
+            android:textColor="@color/white_color"
+            swipe:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            swipe:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/showDateTimeContentTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:text="12:15  2017/11/16"
+            android:textColor="@color/white_color"
+            swipe:layout_constraintBottom_toBottomOf="parent"
+            swipe:layout_constraintLeft_toLeftOf="@+id/showDateTimeHeaderTV2"
+            swipe:layout_constraintRight_toRightOf="parent"
+            swipe:layout_constraintTop_toBottomOf="@+id/showDateTimeHeaderTV2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        swipe:layout_constraintTop_toBottomOf="@+id/post_image_view2"
+        swipe:layout_constraintHorizontal_bias="0.0"
+        swipe:layout_constraintLeft_toLeftOf="parent"
+        swipe:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/caption_textview2"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="2dp"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:text="TagLine"
+            android:textColor="@color/black_color"
+            android:textSize="18dp"
+            swipe:layout_constraintEnd_toStartOf="@+id/likes_layout2"
+            swipe:layout_constraintStart_toStartOf="parent"
+            swipe:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="8dp"
+            swipe:layout_constraintLeft_toLeftOf="parent"
+            swipe:layout_constraintRight_toLeftOf="@+id/likes_layout2"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:id="@+id/share_in_between_IV2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/pass_icon_croped"
+            swipe:layout_constraintBottom_toBottomOf="@+id/both_views_creator"
+            swipe:layout_constraintLeft_toRightOf="@+id/both_views_creator"
+            swipe:layout_constraintTop_toTopOf="@+id/both_views_creator"
+            android:layout_marginStart="4dp" />
+
+        <com.connect.infixd.mobile.CustomViews.CircleImageView
+            android:id="@+id/both_views_creator"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/userprofile"
+            swipe:layout_constraintBottom_toBottomOf="parent"
+            swipe:layout_constraintLeft_toLeftOf="parent"
+            swipe:layout_constraintTop_toBottomOf="@+id/caption_textview2"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- shared user layout -->
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            swipe:layout_constraintBottom_toBottomOf="@+id/share_in_between_IV2"
+            swipe:layout_constraintLeft_toRightOf="@+id/share_in_between_IV2"
+            swipe:layout_constraintTop_toTopOf="@+id/share_in_between_IV2"
+            android:layout_marginStart="4dp"
+            android:id="@+id/constraintLayout5">
+
+            <TextView
+                android:id="@+id/shared_user_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="Ravinesh"
+                android:textColor="@color/black_color"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                swipe:layout_constraintBottom_toBottomOf="@+id/shared_user_image_view2"
+                swipe:layout_constraintLeft_toRightOf="@+id/shared_user_image_view2"
+                swipe:layout_constraintTop_toTopOf="@+id/shared_user_image_view2"
+                android:layout_marginStart="4dp" />
+
+            <com.connect.infixd.mobile.CustomViews.CircleImageView
+                android:id="@+id/shared_user_image_view2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/userprofile"
+                swipe:layout_constraintBottom_toBottomOf="parent"
+                swipe:layout_constraintLeft_toLeftOf="parent"
+                swipe:layout_constraintTop_toTopOf="parent"
+                swipe:layout_constraintVertical_bias="0.0"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!-- likes layout -->
+        <android.support.constraint.ConstraintLayout
+            android:id="@id/likes_layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="2dp"
+            swipe:layout_constraintEnd_toEndOf="parent"
+            swipe:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="8dp"
+            swipe:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/likes_text_view2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="1004"
+                android:textColor="@color/black_color"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                swipe:layout_constraintBottom_toBottomOf="@+id/likes_image_view2"
+                swipe:layout_constraintLeft_toRightOf="@+id/likes_image_view2"
+                swipe:layout_constraintTop_toTopOf="@+id/likes_image_view2"
+                android:layout_marginStart="4dp" />
+
+            <ImageView
+                android:id="@+id/likes_image_view2"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:src="@drawable/like_icon_before_press"
+                swipe:layout_constraintBottom_toBottomOf="parent"
+                swipe:layout_constraintLeft_toLeftOf="parent"
+                swipe:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!-- passes layout -->
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginBottom="2dp"
+            swipe:layout_constraintBottom_toBottomOf="parent"
+            swipe:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="8dp"
+            swipe:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/constraintLayout4"
+            android:layout_marginTop="4dp"
+            swipe:layout_constraintTop_toBottomOf="@+id/likes_layout2">
+
+            <TextView
+                android:id="@+id/passes_text_view2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="1578"
+                android:textColor="@color/black_color"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                swipe:layout_constraintBottom_toBottomOf="@+id/passes_image_view2"
+                swipe:layout_constraintLeft_toRightOf="@+id/passes_image_view2"
+                swipe:layout_constraintTop_toTopOf="@+id/passes_image_view2"
+                swipe:layout_constraintVertical_bias="0.0"
+                android:layout_marginStart="4dp" />
+
+            <ImageView
+                android:id="@+id/passes_image_view2"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:src="@drawable/share_icon"
+                swipe:layout_constraintBottom_toBottomOf="parent"
+                swipe:layout_constraintLeft_toLeftOf="parent"
+                swipe:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

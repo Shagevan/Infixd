@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) Infixd Pvt.Ltd. - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context="com.connect.infixd.mobile.SignupProcess.SignupThirdStep">
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="567dp"
+        android:id="@+id/guideline"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="289dp"
+        app:layout_constraintGuide_percent="0.7526042" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="567dp"
+        android:id="@+id/guideline2"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="98dp"
+        app:layout_constraintGuide_percent="0.25520834" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline3"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="245dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.43209878" />
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline8"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="48dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.08465608" />
+
+    <com.connect.infixd.mobile.CustomViews.CircleImageView
+        android:id="@+id/stepThreeProfPic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/addimagered"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/primary_color"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0">
+
+    </com.connect.infixd.mobile.CustomViews.CircleImageView>
+
+    <TextView
+        android:text="Hi Kusal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/hello"
+        android:textSize="8pt"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintLeft_toLeftOf="@+id/stepThreeProfPic"
+        app:layout_constraintRight_toRightOf="@+id/stepThreeProfPic"
+        android:layout_marginTop="50dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        android:text="Are Your Friends Already On Infixd?"
+        android:layout_width="0dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_height="wrap_content"
+        android:id="@+id/message"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/hello"
+        android:gravity="center"
+        android:textSize="8pt"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <Button
+        android:text="Send Friend Request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/requestBtn"
+        android:textAllCaps="false"
+        android:textSize="8pt"
+        android:textColor="@color/white_color"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/message"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/red_button_background"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline11"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="542dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.9559083" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/thirdSkipTV"
+        android:textColor="@color/primary_color"
+        android:textSize="8pt"
+        android:gravity="center"
+        android:padding="15dp"
+        app:layout_constraintRight_toRightOf="@+id/requestBtn"
+        app:layout_constraintLeft_toLeftOf="@+id/requestBtn"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintHorizontal_bias="0.504" />
+</android.support.constraint.ConstraintLayout>

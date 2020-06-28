@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+Copyright (C) Infixd Pvt.Ltd. - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+-->
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="main_screen_back">#0b4e61</color>
+    <color name="white_color">#FFFFFF</color>
+    <color name="Pink_color">#f35353</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#e0e0e0</color>
+    <color name="primary_color">#B10D28</color>
+    <color name="primary_dark">#B10D28</color>
+    <color name="accent_color">#CCD1CC</color>
+    <color name="green_color">#006748</color>
+    <color name="ash_color">#BBBBBB</color>
+    <color name="chat_light_blue">#E3F2FD</color>
+    <color name="chat_dark_blue">#BBDEFB</color>
+
+    <color name="yellow_color">#F8CC0F</color>
+    <color name="red_color">#a81e2b</color>
+    <color name="blue_color">#4958a0</color>
+    <color name="purple_color">#AF4398</color>
+    <color name="maroon_color">#650A34</color>
+    <color name="black_color">#000000</color>
+    <color name="introduction_blue">#1B1953</color>
+    <color name="introduction_maroon">#650A34</color>
+
+    <integer-array name="newCurrentsColors">
+        <item>@color/green_color</item>
+        <item>@color/yellow_color</item>
+        <item>@color/red_color</item>
+        <item>@color/blue_color</item>
+        <item>@color/maroon_color</item>
+        <item>@color/black_color</item>
+        <item>@color/introduction_blue</item>
+        <item>@color/colorAccent</item>
+    </integer-array>
+
+    <color name="black_overlay">#66000000</color>
+
+</resources>

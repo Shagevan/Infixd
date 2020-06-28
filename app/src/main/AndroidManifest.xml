@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) Infixd Pvt.Ltd. - All Rights Reserved
+ Unauthorized copying of this file, via any medium is strictly prohibited
+ Proprietary and confidential
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.connect.infixd.mobile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:name=".Application.InfixdApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:allowBackup">
+        <activity android:name=".SignupProcess.LauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignupProcess.SignupProcessActivity" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".SignupProcess.FacebookLoginActivity"
+            android:label="@string/title_activity_facebook_login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SignupProcess.TwitterLoginActivity"
+            android:label="@string/title_activity_twitter_login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".Services.InfixdFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Services.InfixdFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- RecentChat Notification Services -->
+        <service
+            android:name=".Services.RecentChatNotificationService"
+            android:enabled="true"></service>
+
+        <!-- Intent Services -->
+        <service
+            android:name=".intentservices.UserIntentService"
+            android:exported="false" />
+        <service
+            android:name=".intentservices.FriendIntentService"
+            android:exported="false" />
+        <service
+            android:name=".intentservices.NotificationIntentService"
+            android:exported="false" />
+        <service
+            android:name=".Services.InfixdUploadService"
+            android:exported="false" />
+        <service
+            android:name=".Services.InfixdDownloadService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".Services.RecentChatBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="RestartRecentChatServiceWhenStopped">
+            <intent-filter>
+                <action android:name="RecentChatNotificationService.RestartService" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".SignupProcess.RegisterPage"
+            android:windowSoftInputMode="adjustUnspecified" />
+        <activity android:name=".Search.InfixdSearchActivity" />
+        <activity android:name=".Groups.AddGroupActivity" />
+        <activity android:name=".User.UserProfileForFriends" />
+        <activity android:name=".User.UserProfileForNotFriends" />
+        <activity
+            android:name=".User.UserProfileEditDialog"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
+        <activity android:name=".User.UserProfile" />
+        <activity
+            android:name=".SignupProcess.GoogleLoginActivity"
+            android:label="@string/title_activity_google_login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".Post.NewPostActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".Functions.CropImageActivity" />
+        <activity
+            android:name=".Chat.ChatActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".UserHome.UserHomeActivity"
+            android:label="@string/title_activity_user_home"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".NearSearch.NearSearchActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".Post.ShareAlertDialog"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
+        <activity android:name=".Introduction.IntroductionPathActivity" />
+        <activity
+            android:name=".Search.SearchContactsActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Groups.GroupMembersInfoActivity" />
+        <activity android:name=".Groups.GroupAdminActivity" />
+        <activity android:name=".Groups.SubscribedMemberActivity" />
+        <activity android:name=".Groups.GroupMembersActivity" />
+        <activity android:name=".Search.SearchGroupMembersActivity" />
+        <activity android:name=".Search.SearchGroupActivity" />
+        <activity android:name=".Groups.GroupPublicProfileActivity" />
+        <activity android:name=".Groups.AdminRequestActivity" />
+        <activity android:name=".Currents.ReactedUsersActivity" />
+        <activity android:name=".Functions.CropProfilePictureActivity" />
+        <activity
+            android:name=".Functions.ImageViewerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_image_viewer"
+            android:theme="@style/FullscreenTheme" />
+
+        <activity android:name=".UserHome.AddUserAlertDialog"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:windowSoftInputMode="adjustResize"/>
+    </application>
+
+</manifest>

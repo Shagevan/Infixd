@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) Infixd Pvt.Ltd. - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/add_user"
+        android:icon="@drawable/ic_add_white"
+        android:title="chat"
+        app:showAsAction="always"
+        />
+
+    <item android:id="@+id/near_search"
+        android:icon="@drawable/nearch_search_tab_icon"
+        android:title="near search"
+        app:showAsAction="always"
+      />
+
+    <item android:id="@+id/chat_activity"
+        android:icon="@drawable/ic_chat"
+        android:title="chat"
+        app:showAsAction="always"
+         />
+
+</menu>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) Infixd Pvt.Ltd. - All Rights Reserved
+Unauthorized copying of this file, via any medium is strictly prohibited
+Proprietary and confidential
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white_color"
+    tools:context="com.connect.infixd.mobile.SignupProcess.RegisterPage">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
+
+        <EditText
+            android:id="@+id/fnameSignup"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/tbox"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="15dp"
+            android:textColorHint="@color/ash_color"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            android:padding="15dp"
+            android:textColorHint="@color/ash_color"
+            android:background="@drawable/tbox"
+            android:id="@+id/lnameSignup"
+            android:hint="Last Name"
+            app:layout_constraintLeft_toLeftOf="@+id/fnameSignup"
+            app:layout_constraintRight_toRightOf="@+id/fnameSignup"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/fnameSignup"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:inputType="number"
+            android:background="@drawable/tbox"
+            android:id="@+id/mobileNumberSignup"
+            android:hint="Mobile Number"
+            android:textColorHint="@color/ash_color"
+            android:padding="15dp"
+            android:maxLength="9"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/ccp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintRight_toRightOf="@+id/lnameSignup"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/lnameSignup"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <Button
+            android:id="@+id/signUpBtn"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/tbox"
+            android:onClick="onSignUpPressed"
+            android:text="Get Started"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_dark"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="@+id/mobileNumberSignup"
+            app:layout_constraintStart_toStartOf="@+id/ccp"
+            app:layout_constraintTop_toBottomOf="@+id/mobileNumberSignup" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="108dp"
+            android:layout_height="210dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/infixdlatestlogo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/tbox"
+            android:gravity="center"
+            app:defaultCode="94"
+            app:hideNameCode="true"
+            app:layout_constraintLeft_toLeftOf="@+id/lnameSignup"
+            app:layout_constraintTop_toBottomOf="@+id/lnameSignup"
+            app:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mobileNumberSignup"
+            android:layout_marginBottom="0dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

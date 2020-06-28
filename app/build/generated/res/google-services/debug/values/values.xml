@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">490157919367-3q1s613e970tatid72j5aiit5l8qf27j.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://strapd-162605.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">490157919367</string>
+    <string name="google_api_key" translatable="false">AIzaSyCoPNgnKZwYrj6FECdhlCitCuUC9ioWw6U</string>
+    <string name="google_app_id" translatable="false">1:490157919367:android:7a23034d17c70e38</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCoPNgnKZwYrj6FECdhlCitCuUC9ioWw6U</string>
+    <string name="google_storage_bucket" translatable="false">strapd-162605.appspot.com</string>
+    <string name="project_id" translatable="false">strapd-162605</string>
+</resources>
